@@ -4,7 +4,7 @@ import { setFilter } from 'redux/sliceFilter';
 
 export const Filter = () => {
   const dispatch = useDispatch();
-  const { filter } = useSelector(state => state);
+  const filter = useSelector(state => state.filter);
 
   const handleChange = ({ target }) => {
     dispatch(setFilter(target.value));

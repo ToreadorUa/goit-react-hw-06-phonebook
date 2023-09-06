@@ -4,7 +4,8 @@ import { delContact } from 'redux/sliceForm';
 import { styled } from 'styled-components';
 
 export const ContactList = () => {
-  const { contacts, filter } = useSelector(state => state);
+  const contacts = useSelector(state => state.contacts);
+  const filter = useSelector(state => state.filter);
   const dispatch = useDispatch();
 
   const filterArray = contacts.filter(({ name }) =>

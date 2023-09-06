@@ -5,10 +5,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/sliceForm';
 
 export const Form = () => {
-  const [name, setName] = useState();
-  const [number, setNumber] = useState();
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
 
-  const { contacts } = useSelector(state => state);
+  const contacts = useSelector(state => state.contacts);
   const dispatch = useDispatch();
 
   const handleChange = ({ target }) => {
